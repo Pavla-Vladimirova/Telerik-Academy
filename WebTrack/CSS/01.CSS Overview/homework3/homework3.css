@@ -1,0 +1,47 @@
+body
+{
+    background-color: #A9A9A9;
+}
+h1
+{
+    
+    color: #FFFFFF;
+}
+
+body header>h1
+{
+    text-align: center;
+}
+article header h1
+{
+    text-align: left;
+}
+
+ul
+{
+    list-style-type:none;
+    text-align: center;
+}
+
+
+li a
+{
+    color: #FFFFFF;
+    text-decoration: none;   
+}
+
+
+#firstItem
+{
+    background-color: #D3D3D3;
+}
+
+#secondItem
+{
+    text-decoration: underline;
+}
+
+#lastFooter
+{
+    text-align: center;
+}

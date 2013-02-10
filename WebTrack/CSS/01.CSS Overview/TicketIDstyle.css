@@ -1,0 +1,49 @@
+
+table
+{
+    background-color: #595959;
+    width: 494px;
+    height: 331px;
+    font-family:"Arial";
+}
+
+#ticket
+{
+    font-size: 20px;
+    color: #B4A18C;
+}
+#circle 
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #71B47A;
+}
+
+.greytext
+{
+    
+    color: #B4A18C;
+}
+.beigeText
+{
+    color: #E6E1AC;
+}
+
+.firstColumn
+{
+    color: #FFFFFF;
+    font-style:italic;
+}
+#support
+{
+    color: #F50E23;
+    font-weight: bold;
+    
+}
+#answered
+{
+    color: #CE6A2F;
+    font-weight: bold;
+}

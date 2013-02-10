@@ -1,0 +1,16 @@
+
+div
+{
+   
+    float: left;
+    /*width: 64px;
+    height: 38px;*/
+    width: 90%;
+    background-color: #000000;
+    border: 1px solid #FF0000; 
+    border-radius: 50px 50px 50px 50px;
+    -moz-border-radius: 50px 50px 50px 50px;
+       
+        
+    
+}

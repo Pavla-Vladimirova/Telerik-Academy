@@ -1,0 +1,19 @@
+body ul {
+  padding-left: 0; }
+  body ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 1px; }
+    body ul li label img {
+      width: 230px;
+      height: 230px; }
+    body ul li input[type=radio] {
+      display: none; }
+      body ul li input[type=radio] + img {
+        display: none;
+        position: absolute;
+        width: 560px;
+        left: 7px; }
+      body ul li input[type=radio]:checked + img {
+        display: block; }
+

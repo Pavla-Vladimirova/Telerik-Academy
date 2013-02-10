@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" type="text/css" href="05.Computers.css"/>
+            
+            <script type="text/javascript">
+            function updateTextInput(val, id)
+            {
+              document.getElementById(id).value=val; 
+            }
+        </script>
+        </head>
+        <body>
+            <div>
+                <div id="header">
+                    <a href="#">Apple</a>
+                    <a href="#">Lenovo</a>
+                    <a href="#">Toshiba</a>
+                    <a href="#">Dell</a>
+                    <a href="#">Asus</a>
+                    <a href="#">Hacer</a>
+                    <a href="#">HP</a>
+                </div>
+                <hr>
+                <div id="catalogue">
+                    <div>
+                        <fieldset>
+                            <legend>Apple MacBook Air</legend>
+                            <img src="images/applemin.jpg"/>
+                            <p>64 GB SSD</p>
+                            <p>2 GB DDR</p>
+                            <p>1300 USD <span>Intel Core i5</span></p>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>Apple MacBook Air</legend>
+                            <img src="images/applemin.jpg"/>
+                            <p>64 GB SSD</p>
+                            <p>2 GB DDR</p>
+                            <p>1300 USD <span>Intel Core i5</span></p>
+                        </fieldset>
+                    </div>
+                    <div>
+                         <fieldset>
+                            <legend>Apple MacBook Air</legend>
+                            <img src="images/applemin.jpg"/>
+                            <p>64 GB SSD</p>
+                            <p>2 GB DDR</p>
+                            <p>1300 USD <span>Intel Core i5</span></p>
+                        </fieldset>
+                    </div>
+                    <div>
+                         <fieldset>
+                            <legend>Apple MacBook Air</legend>
+                            <img src="images/applemin.jpg"/>
+                            <p>64 GB SSD</p>
+                            <p>2 GB DDR</p>
+                            <p>1300 USD <span>Intel Core i5</span></p>
+                        </fieldset>
+                    </div>
+                    <div>
+                         <fieldset>
+                            <legend>Apple MacBook Air</legend>
+                            <img src="images/applemin.jpg"/>
+                            <p>64 GB SSD</p>
+                            <p>2 GB DDR</p>
+                            <p>1300 USD <span>Intel Core i5</span></p>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>Apple MacBook Air</legend>
+                            <img src="images/applemin.jpg"/>
+                            <p>64 GB SSD</p>
+                            <p>2 GB DDR</p>
+                            <p>1300 USD <span>Intel Core i5</span></p>
+                        </fieldset>
+                    </div>
+                </div>
+                <div id="characterization">
+                    <div>
+                         Min price:
+                        <input type="text" id="textInput" value="500" size=1>USD <br>
+                        <input type="range" name="rangeInput" min="0" max="1000" onchange="updateTextInput(this.value, 'textInput' );"> 
+                    </div>
+                    <div>
+                         Max price:
+                        <input type="text" id="maxPrice" value="1500" size=1>USD <br>
+                        <input type="range" name="rangeInput" min="0" max="3000" onchange="updateTextInput(this.value,'maxPrice');">
+                    </div>
+                    <div>
+                        Min RAM:
+                        <input type="text" id="minRAM" value="4" size=1>GB <br>
+                        <input type="range" name="rangeInput" min="0" max="8" onchange="updateTextInput(this.value,'minRAM');">
+                    </div>
+                    <div>
+                        Max RAM:
+                        <input type="text" id="maxRAM" value="16" size=1>GB <br>
+                        <input type="range" name="rangeInput" min="0" max="32" onchange="updateTextInput(this.value,'maxRAM');">
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>

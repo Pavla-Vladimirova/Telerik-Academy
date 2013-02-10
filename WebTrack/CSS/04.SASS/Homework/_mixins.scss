@@ -1,0 +1,16 @@
+ @mixin
+gradient ($color1,$color2,$color3){
+    background: -webkit-linear-gradient(top, $color1, 
+ $color2 25%,$color3);
+	background: -moz-linear-gradient(top, $color1, 
+ $color2 25%,$color3);
+	background: -o-linear-gradient(top, $color1, 
+ $color2 25%,$color3);
+		background: -ms-linear-gradient(top, $color1, 
+ $color2 25%,$color3);
+}
+@mixin
+borders ($radius) {
+    border: 1px solid black;
+    border-radius: #{$radius}px;
+}

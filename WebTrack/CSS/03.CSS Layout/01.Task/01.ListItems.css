@@ -1,0 +1,38 @@
+li
+{
+    list-style-type: none;
+}
+
+
+ul ul 
+{
+    display: none;
+    position: relative;
+    right: 2%;    
+}
+
+a
+{
+    color: black;
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+
+ul li> ul li a
+{
+    color: grey;
+}
+
+ul li:hover > ul
+{
+    display: block;    
+}
+
+
+
+
+
+

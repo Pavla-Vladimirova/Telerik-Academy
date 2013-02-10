@@ -1,0 +1,38 @@
+
+
+body {
+    ul {
+        padding-left: 0;
+
+        li {
+            display: inline-block;
+            list-style-type: none;
+			margin-right:1px;
+
+            label {
+                img {
+                    width: 230px;
+                    height: 230px;
+                }
+            }
+
+            input[type=radio] {
+                display: none;
+
+                &+img {
+                    display: none;
+					position:absolute;
+					width:560px;
+					left:7px;
+                    
+                }
+
+                &:checked {
+					&+img {
+                   display:block;
+                }
+                }
+            }
+        }
+    }
+}

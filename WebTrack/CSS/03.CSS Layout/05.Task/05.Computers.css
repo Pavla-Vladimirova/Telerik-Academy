@@ -1,0 +1,112 @@
+body>div
+{
+    height: 510px;
+    width: 688px;
+    border:  3px solid #4E4E4E;
+    border-radius: 7px;
+}
+
+#header
+{
+    height: 35px;
+    text-align: center;
+    line-height: 43px;
+}
+
+#header a
+{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #00A8EF;
+}
+
+
+hr
+{
+  border-color: #909090;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#catalogue
+{
+    height: 444px;
+    width: 432px;
+    margin-left: 8px;
+    margin-right: 15px;
+    float: left;
+     border:  2px solid #4E4E4E;
+}
+
+#catalogue div
+{
+    
+    height: 144px;
+    width: 210px;
+    margin-left: 3px;
+    float: left;
+}
+fieldset
+{
+    height: 124px;
+    border-color: #4E4E4E;
+    margin-left: 1px;
+}
+legend
+{
+    text-align: center;
+}
+fieldset img
+{
+    float: left;
+    margin-top: 12px;
+    margin-right: 4px;
+}
+p
+{
+    width: 80px;
+    height: 20px;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+fieldset p:nth-child(5)
+{
+    width: 184px;
+    height: 20px;
+    overflow: hidden;
+}
+p span
+{
+    margin-left: 33px;
+}
+#characterization
+{
+    height: 444px;
+    width: 210px;
+    float: left;
+    padding-top: 85px;
+    box-sizing: border-box;
+}
+
+#characterization div
+{
+    height: 70px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    
+}
+input[type="text"]
+{
+    margin-left: 10px;
+    border:none;
+    text-align: right;
+}
+input[type="range"]
+{
+    width: 150px;
+   margin-left: 5px;
+}

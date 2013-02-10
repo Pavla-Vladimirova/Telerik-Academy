@@ -1,0 +1,95 @@
+section
+{
+    width: 662px;
+    border: 1px solid #FCD82C;
+    border-radius:8px;
+}
+header
+{
+    width: 662px;
+    height: 67px;
+    background-color: #373737;
+    border-radius:  7px 7px 0 0;
+    
+}
+
+article
+{
+    display: inline-block;
+    width: 662px;
+    height: 232px;
+    background-color: #3B3B3B;
+    border-radius:  0 0 7px 7px ;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    padding: 10px 20px;
+}
+
+img
+{
+    margin-top: 10px;
+    margin-left: 17px;
+    float: left;
+    background: transparent;    
+}
+form
+{
+    height: 67px;
+}
+label
+{
+    font-size: 22px;
+    margin-left: 17px;
+    color: white;
+}
+input
+{
+   margin-top: 24px;
+   margin-left: 17px;
+   text-indent: 10px;
+   
+   
+}
+input[type="submit"]
+{
+    background : url('images/buttonTransparent.png') no-repeat center center;
+    width : 56px;
+    height :28px;
+    border : none;
+    color : transparent;
+    position: relative;
+    bottom: 5px;
+}
+
+h1
+{
+    font-weight: normal;
+    color: #FFD223;
+    font-size: 22px;
+    margin-bottom: 0;
+    margin-top: 10px;
+   
+}
+p
+{
+    width: 620px;
+    height: 60px;
+    color: #A7A7A7;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+p+p
+{
+    width: 620px;
+    height: 90px;
+    margin-top: 0;
+}
+span
+{
+    color: #F9F9F9;
+}
+a
+{
+    color: inherit;
+    text-decoration: none;
+}

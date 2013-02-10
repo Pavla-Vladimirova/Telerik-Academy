@@ -1,0 +1,52 @@
+#headerLine
+{
+    background-color: #50B306;
+    color: #FFFFFF;
+}
+table
+{
+    width:826px;
+    height: 243px;
+    font-family: "Helvetica";
+}
+td
+{  
+    padding-left:15px;
+}
+table,td
+{
+    border: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-collapse: collapse;
+  
+   
+}
+.greyRow
+{
+    background-color: #ECECD8;
+}
+#germany
+{
+    background-image: url(images/germany-flag.jpg);
+    background-repeat: no-repeat;
+    background-position: 12px,12px;
+     padding-left:60px;
+    
+}
+#mexico
+{
+    background-image: url(images/banderamexico.jpg);
+    background-repeat: no-repeat;
+    background-position: 12px,12px;
+     padding-left:60px;
+    
+}
+#uk
+{
+    background-image: url(images/uk.jpg);
+    background-repeat: no-repeat;
+    background-position: 12px,12px;
+     padding-left:60px;
+    
+}
