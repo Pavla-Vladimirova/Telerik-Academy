@@ -1,0 +1,49 @@
+body {
+  font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+  font-size: 16px;
+  margin: 0; }
+  body div#wrapper {
+    margin: 25px; }
+    body div#wrapper div {
+      width: 935px;
+      height: 210px;
+      border: 1px solid black;
+      background: -webkit-linear-gradient(top, #de28ff, #f9dbff 79%);
+      background: -moz-linear-gradient(top, #de28ff, #f9dbff 79%);
+      background: -o-linear-gradient(top, #de28ff, #f9dbff 79%);
+      background: -ms-linear-gradient(top, #de28ff, #f9dbff 79%);
+      border-radius: 15px;
+      box-sizing: border-box; }
+      body div#wrapper div h1 {
+        margin: 0;
+        margin-left: 35px;
+        margin-top: 15px;
+        box-sizing: border-box;
+        font-size: 1.8em; }
+      body div#wrapper div img.left-arrow {
+        float: left;
+        position: absolute;
+        top: 109px; }
+      body div#wrapper div img.right-arrow {
+        float: right;
+        position: absolute;
+        left: 929px;
+        top: 109px; }
+      body div#wrapper div p.postedby {
+        float: left;
+        margin: 0;
+        margin-top: 5px;
+        margin-bottom: 21px;
+        margin-left: 50px;
+        padding: 5px 14px;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        box-sizing: border-box; }
+      body div#wrapper div p.info {
+        clear: both;
+        margin-left: 35px;
+        margin-right: 35px;
+        margin-bottom: 35px;
+        box-sizing: border-box;
+        text-align: justify; }
+

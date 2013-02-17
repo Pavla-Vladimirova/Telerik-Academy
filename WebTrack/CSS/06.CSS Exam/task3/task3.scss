@@ -1,0 +1,199 @@
+ @mixin reset{
+  margin:0;
+  padding:0;
+  list-style-type:none;
+}
+@mixin gradient{
+	background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #ffffff 22%, #f1f2f3 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(22%,#ffffff), color-stop(100%,#f1f2f3)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#ffffff 22%,#f1f2f3 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#ffffff 22%,#f1f2f3 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#ffffff 22%,#f1f2f3 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 0%,#ffffff 22%,#f1f2f3 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f1f2f3',GradientType=0 ); /* IE6-9 */
+
+}
+
+body{
+	font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+	font-size:16px;
+	@include reset;
+	div#wrapper{
+		@include reset;
+		width:902px;
+		height:284px;
+		margin:20px;
+		box-sizing:border-box;
+		border:2px solid  #D3D7DA;
+		border-left:0;
+		border-bottom:0;
+		position: relative;
+		&>div{
+			@include reset;
+			float:left;
+			width:150px;
+			box-sizing:border-box;
+			border-bottom:2px solid #D3D7DA;
+			&:first-child{
+				&:after {
+				background: url("imgs/install.png");
+				background-repeat:no-repeat;
+				width: 36px;
+				height: 36px;
+				top: 14px;
+				left: 6px;
+				position: absolute;
+				z-index: 100;
+				content: "";
+				}
+			}
+			&:nth-of-type(2){
+				&:after {
+				background: url("imgs/tuneUp.png");
+				background-repeat:no-repeat;
+				width: 36px;
+				height: 36px;
+				top: 14px;
+				left: 156px;
+				position: absolute;
+				z-index: 100;
+				content: "";
+				}
+			}
+			&:nth-of-type(3){
+				&:after {
+				background: url("imgs/manage.png");
+				background-repeat:no-repeat;
+				width: 36px;
+				height: 36px;
+				top: 14px;
+				left: 304px;
+				position: absolute;
+				z-index: 100;
+				content: "";
+				}
+			}
+			&:nth-of-type(4){
+				&:after {
+				background: url("imgs/openSource.png");
+				background-repeat:no-repeat;
+				width: 36px;
+				height: 36px;
+				top:14px;
+				left: 456px;
+				position: absolute;
+				z-index: 100;
+				content: "";
+				}
+			}
+			&:nth-of-type(5){
+				&:after {
+				background: url("imgs/twitter.png");
+				background-repeat:no-repeat;
+				width: 36px;
+				height: 36px;
+				top: 14px;
+				left: 604px;
+				position: absolute;
+				z-index: 100;
+				content: "";
+				}
+			}
+			&:nth-of-type(6){
+				&:after {
+				background: url("imgs/about.png");
+				background-repeat:no-repeat;
+				width: 36px;
+				height: 36px;
+				top: 14px;
+				left: 756px;
+				position: absolute;
+				z-index: 100;
+				content: "";
+				}
+			}
+			&:nth-of-type(2n){
+				height:282px;
+				border-right:2px solid #D3D7DA;
+				border-left:2px solid #D3D7DA;
+				@include gradient;
+			}
+			&:nth-of-type(2n+1){
+				height:263px;
+				&:first-child{
+					border-left:2px solid #D3D7DA;
+				}
+			}
+			&:last-child{
+				border-right:0;
+			}
+			&:first-child{
+				p{
+					margin-left:4px;
+					margin-right:10px;
+				}
+			}
+			&:nth-of-type(2){
+				p{
+					margin-left:4px;
+					margin-right:0;
+				}
+			}
+			&:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(6){
+				h2{
+					margin-top:30px;
+				}
+			}
+			&:nth-of-type(5){
+				a{
+					@include reset;
+					display:inline;
+				}
+			}
+			hgroup{
+				h3{
+					font-size:1em;
+					@include reset;
+					box-sizing:border-box;
+					margin-left:44px;
+					margin-top:10px;
+				}
+				h2{
+					font-size:1em;
+					@include reset;
+					box-sizing:border-box;
+					margin-left:44px;
+				}
+			}
+			p{
+				@include reset;
+				box-sizing:border-box;
+				margin-top:16px;
+				margin-bottom:5px;
+				margin-left:4px;
+				margin-right:5px;
+			}
+			div.yellowBox{
+				margin-left:4px;
+				margin-right:5px;
+				border:1px solid #FFFF00;
+				background-color:#FFFFDD;
+			}
+			div{
+				@include reset;
+				box-sizing:border-box;
+				span{
+					 text-transform: uppercase;
+				}
+				a{
+					@include reset;
+					color:#C72D2F;
+					text-decoration:none;
+					margin-left:4px;
+					display:block;
+				}
+			}
+		}
+	}
+}
