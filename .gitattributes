@@ -10,9 +10,9 @@
 *.dbproj merge=union
 
 # Standard to msysgit
-*.doc	 diff=astextplain
+*.doc diff=word
 *.DOC	 diff=astextplain
-*.docx diff=astextplain
+*.docx diff=word
 *.DOCX diff=astextplain
 *.dot  diff=astextplain
 *.DOT  diff=astextplain
