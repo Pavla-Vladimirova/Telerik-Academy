@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>If Third Digit Of Number Is 7</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+     <label for="tb-first">Number: </label>
+	<input type="text" id="tb-first"/>
+	<br />
+	<a href="#" onclick="onFindThirdDigitButtonClick()">Check if number's third digit is 7</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+
+    <script>
+        function onFindThirdDigitButtonClick() {
+            var number = jsConsole.readInteger("#tb-first");
+            var result = (Math.floor(number/ 100))%10;
+            if (result==7) {
+                jsConsole.writeLine("The number's third digit is 7");
+            }
+            else {
+                jsConsole.writeLine("The number's third digit is not 7");
+            }
+        }
+    </script>
+</body>
+</html>

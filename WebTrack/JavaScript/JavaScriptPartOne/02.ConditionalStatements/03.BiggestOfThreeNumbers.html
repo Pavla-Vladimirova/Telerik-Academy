@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Biggest of three numbers</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-first">First Number: </label>
+	<input type="text" id="tb-first"/>
+	<br />
+    <label for="tb-second">Second Number: </label>
+	<input type="text" id="tb-second"/>
+	<br />
+    <label for="tb-third">Third Number: </label>
+	<input type="text" id="tb-third"/>
+	<br />
+	<a href="#" onclick="onFindBiggestButtonClick()">Find the biggest number</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+
+    <script>
+        function onFindBiggestButtonClick() {
+            var firstNumber = jsConsole.readInteger("#tb-first");
+            var secondNumber = jsConsole.readInteger("#tb-second");
+            var thirdNumber = jsConsole.readInteger("#tb-third");
+            var max = firstNumber;
+            if (secondNumber>max) {
+                max = secondNumber;
+            }
+            if(thirdNumber>max) {
+                max=thirdNumber
+            }
+
+            jsConsole.writeLine("The biggest number is " + max);
+        }
+    </script>
+</body>
+</html>

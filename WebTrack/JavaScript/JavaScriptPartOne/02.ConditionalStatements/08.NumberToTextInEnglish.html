@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Number to text in English</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-first">Write a number(0-999): </label>
+	<input type="text" id="tb-first"/>
+	<br />
+	<a href="#" onclick="onWriteNumberButtonClick()">Number In English</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function onWriteNumberButtonClick() {
+            var number = jsConsole.readInteger("#tb-first");
+            var hundreds = Math.floor(number / 100);
+            var tens = Math.floor((number % 100) / 10);
+            var ones = Math.floor((number % 100) % 10);
+            //jsConsole.writeLine("hundreds are " +hundreds + " tens are "+tens+" ones are "+ ones);
+            var onesArray = new Array();
+            onesArray[0] = "one";
+            onesArray[1] = "two";
+            onesArray[2] = "three";
+            onesArray[3] = "four";
+            onesArray[4] = "five";
+            onesArray[5] = "six";
+            onesArray[6] = "seven";
+            onesArray[7] = "eight";
+            onesArray[8] = "nine";
+
+            var tensArray=new Array();
+            tensArray[0] = "twenty";
+            tensArray[1] = "thirty";
+            tensArray[2] = "forty";
+            tensArray[3] = "fifty";
+            tensArray[4] = "sixty";
+            tensArray[5] = "seventy";
+            tensArray[6] = "eighty";
+            tensArray[7] = "ninety";
+
+            var tenToTwentyArray = new Array();
+            tenToTwentyArray[0] = "ten";
+            tenToTwentyArray[1] = "eleven";
+            tenToTwentyArray[2] = "twelve";
+            tenToTwentyArray[3] = "thirteen";
+            tenToTwentyArray[4] = "fourteen";
+            tenToTwentyArray[5] = "fifteen";
+            tenToTwentyArray[6] = "sixteen";
+            tenToTwentyArray[7] = "seventeen";
+            tenToTwentyArray[8] = "eighteen";
+            tenToTwentyArray[9] = "nineteen";
+
+            var hundredsArray=new Array();           
+            hundredsArray[0] = "one hundred";
+            hundredsArray[1] = "two hundred";
+            hundredsArray[2] = "three hundred";
+            hundredsArray[3] = "four hundred";
+            hundredsArray[4] = "five hundred";
+            hundredsArray[5] = "six hundred";
+            hundredsArray[6] = "seven hundred";
+            hundredsArray[7] = "eight hundred";
+            hundredsArray[8] = "nine hundred";
+
+            if ((ones === 0) && (tens === 0) && (hundreds === 0)) {
+                jsConsole.writeLine("zero");
+                return;
+            }
+
+            for (var i = 0; i < hundredsArray.length; i++) {
+                if (hundreds === i + 1) {
+                    jsConsole.write(hundredsArray[i] + " ");
+                }
+            }
+
+            if (tens === 1) {
+                for (var i = 0; i <= onesArray.length; i++) {
+                    if (ones === i) {
+                        jsConsole.writeLine(tenToTwentyArray[i]); return;
+                    }
+                }
+            }
+
+            for (var i = 0; i <= tensArray.length; i++) {
+
+                if (tens === i + 1) {
+
+                    jsConsole.write(tensArray[i - 1] + " ");
+                }
+                else if (tens === 0) {
+                    if (ones === 0) {
+                        jsConsole.writeLine(); return;
+                    }
+                    else {
+                        break;
+                    }
+                }
+            }
+
+            for (var i = 0; i < onesArray.length; i++) {
+                if (ones === i + 1) {
+                    jsConsole.write(onesArray[i]);
+                }
+            }
+            jsConsole.writeLine();
+        }
+    </script>
+</body>
+</html>

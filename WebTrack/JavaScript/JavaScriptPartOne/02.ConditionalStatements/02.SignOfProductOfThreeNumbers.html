@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sign of product</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-first">First Number: </label>
+	<input type="text" id="tb-first"/>
+	<br />
+    <label for="tb-second">Second Number: </label>
+	<input type="text" id="tb-second"/>
+	<br />
+    <label for="tb-third">Third Number: </label>
+	<input type="text" id="tb-third"/>
+	<br />
+	<a href="#" onclick="onCheckSignButtonClick()">Check the sign of the product of these numbers</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+
+    <script>
+        function onCheckSignButtonClick() {
+            var firstNumber = jsConsole.readFloat("#tb-first");
+            var secondNumber = jsConsole.readFloat("#tb-second");
+            var thirdNumber = jsConsole.readFloat("#tb-third");
+            var evenCounter = 0;
+            if (firstNumber<0) {
+                evenCounter++;
+            }
+            if (secondNumber<0) {
+                evenCounter++;
+            }
+            if (thirdNumber<0) {
+                evenCounter++;
+            }
+            if (evenCounter%2==0) {
+                jsConsole.writeLine("The sign of the product ot hte three numbers is '+' ");
+            }
+            else {
+                jsConsole.writeLine("The sign of the product of the three numbers is '-' ");
+            }
+        }
+    </script>
+</body>
+</html>

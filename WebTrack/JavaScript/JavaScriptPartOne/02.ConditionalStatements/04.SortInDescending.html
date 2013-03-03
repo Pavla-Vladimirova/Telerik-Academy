@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sort in descending</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-first">First Number: </label>
+	<input type="text" id="tb-first"/>
+	<br />
+    <label for="tb-second">Second Number: </label>
+	<input type="text" id="tb-second"/>
+	<br />
+    <label for="tb-third">Third Number: </label>
+	<input type="text" id="tb-third"/>
+	<br />
+	<a href="#" onclick="onSortButtonClick()">Sort in descending</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+
+    <script>
+        function onSortButtonClick() {
+            var firstNumber = jsConsole.readFloat("#tb-first");
+            var secondNumber = jsConsole.readFloat("#tb-second");
+            var thirdNumber = jsConsole.readFloat("#tb-third");
+            var exchange = 0;
+
+            if (secondNumber<firstNumber) {
+                exchange = firstNumber;
+                firstNumber = secondNumber;
+                secondNumber = exchange;
+            }
+            if (thirdNumber<firstNumber) {
+                exchange = firstNumber;
+                firstNumber = thirdNumber;
+                thirdNumber = exchange;
+            }
+            if (thirdNumber<secondNumber) {
+                exchange = secondNumber;
+                secondNumber = thirdNumber;
+                thirdNumber = exchange;
+            }
+            jsConsole.writeLine("The numbers now are: ");
+            jsConsole.writeLine(thirdNumber);
+            jsConsole.writeLine(secondNumber);
+            jsConsole.writeLine(firstNumber);
+        }
+    </script>
+</body>
+</html>

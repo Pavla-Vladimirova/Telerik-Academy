@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DividedBy7And5</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-first">Number: </label>
+	<input type="text" id="tb-first"/>
+	<br />
+	<a href="#" onclick="onFindDividedButtonClick()">Check if number is divided by 7 and 5</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+
+    <script>
+        function onFindDividedButtonClick() {
+            var number = jsConsole.readInteger("#tb-first");
+
+            if ((number % 5 == 0)&&(number % 7==0)) {
+                jsConsole.writeLine("Number divided by 7 and 5 at the same time");
+            }
+            else {
+                jsConsole.writeLine("Number is not divided by 7 and 5");
+            }
+        }
+    </script>
+</body>
+</html>

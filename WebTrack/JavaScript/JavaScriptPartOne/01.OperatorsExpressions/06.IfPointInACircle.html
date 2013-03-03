@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>If point is in a circle</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-first">X coordinate: </label>
+	<input type="text" id="tb-first"/>
+	<br />
+    <label for="tb-second">Y coordinate: </label>
+    <input type="text" id="tb-second" />
+    <br />
+	<a href="#" onclick="onFindIfInACircleButtonClick()">Check if the point(X,Y) is in a circle K((0,0),5)</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+
+    <script>
+        function onFindIfInACircleButtonClick() {
+            var x = jsConsole.readInteger("#tb-first");
+            var y = jsConsole.readInteger("#tb-second");
+            var inCircle = ((Math.sqrt(x * x + y * y)) <= 5);
+            if (inCircle === true) {
+                jsConsole.writeLine("The point is in the circle");
+            }
+            else {
+                jsConsole.writeLine("The point is out of the circle");
+            }
+        }
+    </script>
+</body>
+</html>

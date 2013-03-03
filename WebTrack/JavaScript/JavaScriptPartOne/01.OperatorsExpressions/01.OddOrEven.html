@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>odd Or Even</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-first">Number: </label>
+	<input type="text" id="tb-first"/>
+	<br />
+	<a href="#" onclick="onFindOddOrEvenButtonClick()">Check Odd OR Even</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+
+    <script>
+        function onFindOddOrEvenButtonClick() {
+            var number= jsConsole.readInteger("#tb-first");
+
+            if (number % 2 == 0) {
+                jsConsole.writeLine("Number is even");
+            }
+            else {
+                jsConsole.writeLine("Number is odd");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Solve Quadratic Equation</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+     <label for="tb-first">First Number: </label>
+	<input type="text" id="tb-first"/>
+	<br />
+    <label for="tb-second">Second Number: </label>
+	<input type="text" id="tb-second"/>
+	<br />
+    <label for="tb-third">Third Number: </label>
+	<input type="text" id="tb-third"/>
+	<br />
+	<a href="#" onclick="onSolveButtonClick()">Solve Quadratic Equation</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+
+    <script>
+        function onSolveButtonClick() {
+            var a = jsConsole.readFloat("#tb-first");
+            var b = jsConsole.readFloat("#tb-second");
+            var c = jsConsole.readFloat("#tb-third");
+            var d = (b * b) - (4 * a * c);
+            var x1;
+            var x2;
+            if (d == 0) {
+                x1 = -b / (2 * a);
+                jsConsole.writeLine("There is one double root x1=x2= " + x1);
+            }
+            else {
+                if (d > 0) {
+                    x1 = (-b + Math.sqrt(d)) / (2 * a);
+                    x2 = (-b - Math.sqrt(d)) / (2 * a);
+                    jsConsole.writeLine("The first root x1= " + x1);
+                    jsConsole.writeLine("The first root x2= " + x2);
+                }
+                else {
+                    jsConsole.writeLine("There is no real roots");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

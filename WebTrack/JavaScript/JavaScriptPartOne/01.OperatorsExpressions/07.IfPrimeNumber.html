@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>If a number is prime</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-first">Number(<=100): </label>
+	<input type="text" id="tb-first"/>
+	<br />
+	<a href="#" onclick="onFindIfPrimeButtonClick()">Check if number is prime</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+
+    <script>
+        function onFindIfPrimeButtonClick() {
+            var number = jsConsole.readInteger("#tb-first");
+            var flag = true;
+            if (number===1) {
+                jsConsole.writeLine("Number is not prime");
+                flag = false;
+            }
+            for (var i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    jsConsole.writeLine("Number is not prime");
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag===true) {
+                jsConsole.writeLine("Number is  prime");
+            }
+        }
+    </script>
+</body>
+</html>
