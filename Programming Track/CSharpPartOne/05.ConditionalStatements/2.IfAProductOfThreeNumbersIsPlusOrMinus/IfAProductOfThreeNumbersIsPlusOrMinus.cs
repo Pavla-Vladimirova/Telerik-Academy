@@ -17,20 +17,25 @@ namespace _2.IfAProductOfThreeNumbersIsPlusOrMinus
             int secondNum = int.Parse(Console.ReadLine());
             Console.WriteLine("Write the third one:");
             int thirdNum = int.Parse(Console.ReadLine());
-
-            if ((firstNum < 0) && (secondNum < 0) && (thirdNum < 0))
+            int counter=0;
+            
+            if (firstNum < 0)
             {
-                Console.WriteLine("The sign of the product of the three numbers is \"-\" ");
+                counter++;
             }
-            else if ((firstNum > 0) && (secondNum > 0) && (thirdNum > 0))
+            if (secondNum < 0)
             {
-                Console.WriteLine("The sign of the product ot hte three numbers is \"+\" ");
+                counter ++;
             }
-            else if (((firstNum < 0) && (secondNum < 0)) || ((firstNum < 0) && (thirdNum < 0)) || ((secondNum < 0) && (thirdNum < 0)))
+            if (thirdNum < 0)
             {
-                Console.WriteLine("The sign of the product ot hte three numbers is \"+\" ");
+                counter ++;
             }
-            else if ((firstNum < 0) || (secondNum < 0) || (thirdNum < 0))
+            if ((counter % 2) == 0)// Checks if the negative numbers are even number or odd
+            {
+                Console.WriteLine("The sign of the product ot the three numbers is \"+\" ");
+            }
+            else
             {
                 Console.WriteLine("The sign of the product of the three numbers is \"-\" ");
             }
