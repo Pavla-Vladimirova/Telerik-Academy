@@ -27,17 +27,6 @@ namespace _01.School
             }
         }
 
-        public Discipline Discipline
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
         public string Comment()
         {
             return string.Format("Comment about {0}(teacher)",this.Name);

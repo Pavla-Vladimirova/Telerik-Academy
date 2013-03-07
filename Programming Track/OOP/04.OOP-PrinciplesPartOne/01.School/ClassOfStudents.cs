@@ -63,27 +63,5 @@ namespace _01.School
                 Console.WriteLine(" Student: {0}",student);
             }
         }
-
-        public Student Student
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        internal Teacher Teacher1
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
     }
 }
