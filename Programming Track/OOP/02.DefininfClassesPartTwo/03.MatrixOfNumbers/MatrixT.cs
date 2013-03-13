@@ -128,7 +128,7 @@ namespace _03.MatrixOfNumbers
             {
                 for (int j = 0; j < matrix.Cols; j++)
                 {
-                    if (((dynamic)matrix[i, j] == 0) && ((dynamic)matrix[i, j] == 0))
+                    if (((dynamic)matrix[i, j] == 0))
                         return false;
                 }
             }
@@ -142,7 +142,7 @@ namespace _03.MatrixOfNumbers
             {
                 for (int j = 0; j < matrix.Cols; j++)
                 {
-                    if (((dynamic)matrix[i, j] == 0) && ((dynamic)matrix[i, j] == 0))
+                    if (((dynamic)matrix[i, j] == 0))
                         return false;
                 }
             }
