@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Number not divisible by 3 and 7</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+     <label for="tb-first">N: </label>
+	<input type="text" id="tb-first"/>
+	<br />
+	<a href="#" onclick="onFindNumbersButtonClick()">Find Numbers</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        function onFindNumbersButtonClick() {
+            var n = jsConsole.readInteger("#tb-first");
+            var i;
+            for (i = 1; i <= n; i++) {
+                if ((i%(3*7))!=0) {
+                    jsConsole.writeLine(i);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

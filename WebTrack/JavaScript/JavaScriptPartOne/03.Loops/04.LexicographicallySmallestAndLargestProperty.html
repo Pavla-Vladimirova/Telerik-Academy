@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Lexicographically Smallest And Largest Property</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="#" onclick="onFindDocumentMaxAndMinButtonClick()">Find Document Largest And Smallest Lexicographically</a>
+    <br />
+    <a href="#" onclick="onFindWindowMaxAndMinButtonClick()">Find Window Largest And Smallest Lexicographically</a>
+    <br />
+    <a href="#" onclick="onFindNavigatorMaxAndMinButtonClick()">Find Navigator Largest And Smallest Lexicographically</a>
+    <br />
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var property;
+        var documentMax = "";
+        var windowMax = "";
+        var navigatorMax = "";
+        function onFindDocumentMaxAndMinButtonClick() {
+            for (property in document) {
+                if (property > documentMax) {
+                    documentMax = property;
+                }
+               //jsConsole.writeLine("document[" + property + "] = " + document[property]);
+            }
+            jsConsole.writeLine("The largest property lexicographically in document is : " + documentMax);
+            var documentMin = documentMax;
+            for (var property in document) {
+                if (property < documentMin) {
+                    documentMin = property;
+                }
+            }
+            jsConsole.writeLine("The smallest property lexicographically in document is : " + documentMin);
+        }
+
+        function onFindWindowMaxAndMinButtonClick() {
+            for (property in window) {
+                if (property > windowMax) {
+                    windowMax = property;
+                }
+                //jsConsole.writeLine("document[" + property + "] = " + document[property]);
+            }
+            jsConsole.writeLine("The largest property lexicographically in window is : " + windowMax);
+            var windowMin = windowMax;
+            for (var property in window) {
+                if (property < windowMin) {
+                    windowMin = property;
+                }
+            }
+            jsConsole.writeLine("The smallest property lexicographically in window is : " + windowMin);
+        }
+
+        function onFindNavigatorMaxAndMinButtonClick() {
+            for (property in navigator) {
+                if (property > navigatorMax) {
+                    navigatorMax = property;
+                }
+                //jsConsole.writeLine("document[" + property + "] = " + document[property]);
+            }
+            jsConsole.writeLine("The largest property lexicographically in navigator is : " + navigatorMax);
+            var navigatorMin = navigatorMax;
+            for (var property in navigator) {
+                if (property < navigatorMin) {
+                    navigatorMin = property;
+                }
+            }
+            jsConsole.writeLine("The smallest property lexicographically in navigator is : " + navigatorMin);
+        }
+    </script>
+</body>
+</html>

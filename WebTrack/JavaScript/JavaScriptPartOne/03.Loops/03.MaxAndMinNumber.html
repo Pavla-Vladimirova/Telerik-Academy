@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Max and Min number</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<a href="#" onclick="onFindMaxButtonClick()">Find Max</a>
+    <br />
+    <a href="#" onclick="onFindMinButtonClick()">Find Min</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var numbers = [3, 7, 98, 12, 2, 45, 100, 5];
+        jsConsole.writeLine(numbers.join(", "));
+        var i;
+
+        function onFindMaxButtonClick() {
+            var max = numbers[0];
+            for (i = 1; i <numbers.length; i++) {
+                if (numbers[i]>max) {
+                    max=numbers[i]
+                }
+            }
+            jsConsole.writeLine("The maximum number is:" + max);
+        }
+
+        function onFindMinButtonClick() {
+            var min = numbers[0];
+            for (i = 1; i < numbers.length; i++) {
+                if (numbers[i]<min) {
+                    min = numbers[i];
+                }
+            }
+            jsConsole.writeLine("The minimum number is:" + min);
+        }
+    </script>
+</body>
+</html>
