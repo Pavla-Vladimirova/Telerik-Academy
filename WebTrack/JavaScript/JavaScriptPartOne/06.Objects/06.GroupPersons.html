@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check prperty</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+           var person1=buildPerson("Ivan","Ivanov",40);
+           var person2=buildPerson("Georgi","Georgiev",20);
+           var person3=buildPerson("Martin","Martinov",34);
+           var person4=buildPerson("Martin","Marinov",34);
+           var person5=buildPerson("Kamen","Georgiev",34);
+           var persons=[person1,person2,person3,person4,person5];
+           jsConsole.writeLine("Persons: " + persons.join('; '));
+          var property="Age"
+
+
+           function buildPerson(firstName, lastName, age) {
+                return {
+                    FirstName: firstName,
+                    LastName: lastName,
+                    Age:age,
+                    toString: function getFullName() {
+                        return this.FirstName + " " + this.LastName + "," + this.Age;
+                    }
+                };
+            }
+
+            function groupPeople (persons,property) {
+             var groupedPeople = {};
+              if (property==="Age") {
+                  for (var person in persons) {
+                      if (groupedPeople[persons[person].Age]===undefined) {
+                       groupedPeople[persons[person].Age]=[];
+                       groupedPeople[persons[person].Age].push(persons[person]);
+                      }
+                      else {
+                          groupedPeople[persons[person].Age].push(persons[person]);
+                      }
+                  }
+                  return groupedPeople;
+              }
+              else if (property="FirstName") {
+                 for (var person in persons) {
+                      if (groupedPeople[persons[person].FirstName]===undefined) {
+                       groupedPeople[persons[person].FirstName]=[];
+                       groupedPeople[persons[person].FirstName].push(persons[person]);
+                      }
+                      else {
+                          groupedPeople[persons[person].FirstName].push(persons[person]);
+                      }
+                  }
+                  return groupedPeople;
+              }
+              else   {
+                   for (var person in persons) {
+                      if (groupedPeople[persons[person].LastName]===undefined) {
+                       groupedPeople[persons[person].LastName]=[];
+                       groupedPeople[persons[person].LastName].push(persons[person]);
+                      }
+                      else {
+                          groupedPeople[persons[person].LastName].push(persons[person]);
+                      }
+                  }
+                  return groupedPeople;
+              }
+                
+            }
+
+            var group=groupPeople(persons,"Age");
+            jsConsole.writeLine("Age:")
+            for (var person in group) {
+            jsConsole.writeLine(person + " -> " + group[person]);
+            } 
+
+            var group=groupPeople(persons,"FirstName");
+             jsConsole.writeLine("FirstName:")
+            for (var person in group) {
+            jsConsole.writeLine(person + " -> " + group[person]);
+            } 
+
+             var group=groupPeople(persons,"LastName");
+             jsConsole.writeLine("LastName:")
+            for (var person in group) {
+            jsConsole.writeLine(person + " -> " + group[person]);
+            }
+
+
+    </script>
+
+</body>
+</html>

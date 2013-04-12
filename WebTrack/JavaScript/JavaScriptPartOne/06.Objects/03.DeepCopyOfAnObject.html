@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deep Copy</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var array = [1,2,3,4,5];
+	   
+	function makeDeepCopy (object){
+       if (typeof(object)!="Object") {
+            return object;
+       }
+       else if (typeof(object)==="Array") {
+            var copiedArray=new Array(object.length);
+            for (var i = 0; i < object.length; i++) {
+                copiedArray[i]=object[i];
+            };
+            return copiedArray;
+       }
+       else {
+            var copiedObject=new Object();
+            for (var attr in object) {
+                if (object.hasOwnProperty(attr)) {
+                    copiedObject[attr] = object[attr]
+                }
+            }
+            return copiedObject;
+       }
+	   
+	}
+        var newArray=makeDeepCopy(array);
+        newArray[3]=101;
+        jsConsole.writeLine(array.join(","));
+        jsConsole.writeLine(newArray.join(","));
+
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Reverse Strings</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var word="sample";
+        jsConsole.writeLine(word);
+        var newWord = reverse(word);
+        jsConsole.writeLine(newWord);
+		function reverse(word) {
+		    var newWord = "";
+		    for (var i = word.length-1; i >=0 ; i--) {
+		        newWord += word[i];
+		    }
+		    return newWord;
+		}
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Change text in all regions</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var text = "We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>. We <mixcase>don't</mixcase> have <lowcase>ANYTHING</lowcase> else.";
+        jsConsole.writeLine(text);
+        text = changeUpperCase(text);
+        text = changeLowerCase(text);
+        text = changeMixCase(text);
+        jsConsole.writeLine(text);
+
+        function changeUpperCase(text) {
+            var startTag = "<upcase>";
+            var endTag = "</upcase>";
+            var startIndex = text.indexOf(startTag, 0);
+            var endIndex = text.indexOf(endTag, startIndex);
+            while (startIndex >= 0) {
+                var substring = text.substring(startIndex + 8, endIndex);
+                var substringToUpperCase = substring.toUpperCase();
+                text = text.replace(substring, substringToUpperCase);
+                startIndex = text.indexOf(startTag, startIndex+1);
+                endIndex = text.indexOf(endTag, startIndex);
+            }
+            return text;
+        }
+
+        function changeLowerCase(text) {
+            var startTag = "<lowcase>";
+            var endTag = "</lowcase>";
+            var startIndex = text.indexOf(startTag, 0);
+            var endIndex = text.indexOf(endTag, startIndex);
+            while (startIndex >= 0) {
+                var substring = text.substring(startIndex + 9, endIndex);
+                var substringToLowerCase = substring.toLowerCase();
+                text = text.replace(substring, substringToLowerCase);
+                startIndex = text.indexOf(startTag, startIndex+1);
+                endIndex = text.indexOf(endTag, startIndex);
+            }
+            return text;
+        }
+
+        function changeMixCase(text) {
+            var startTag = "<mixcase>";
+            var endTag = "</mixcase>";
+            var startIndex = text.indexOf(startTag, 0);
+            var endIndex = text.indexOf(endTag, startIndex);
+            while (startIndex >= 0) {
+                var substring = text.substring(startIndex + 9, endIndex);
+                var substringToMixCase = "";
+                for (var i = 0; i < substring.length; i++) {
+                    if (i%2===0) {
+                        substringToMixCase += substring[i].toUpperCase();
+                    }
+                    else {
+                        substringToMixCase += substring[i].toLowerCase();
+                    }
+                }
+                text = text.replace(substring, substringToMixCase);
+                startIndex = text.indexOf(startTag, startIndex+1);
+                endIndex = text.indexOf(endTag, startIndex);
+            }
+            return text;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Format String</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var text = "{0}, {1}, {0} text {2}";
+        var words=[1,"Pesho","Gosho"];
+        var formattedText = formatString(text, words);
+        jsConsole.writeLine(text);
+        jsConsole.writeLine("FORMATTED:");
+        jsConsole.writeLine(formattedText);
+      
+        function formatString(text,words) {
+            var formatted = text;
+            for (var i = 0; i < words.length; i++) {
+                formatted = formatted.replace(new RegExp("\\{" + i + "\\}", "gi"),words[i]);
+            }
+            return formatted;
+        };
+
+    </script>
+</body>
+</html>

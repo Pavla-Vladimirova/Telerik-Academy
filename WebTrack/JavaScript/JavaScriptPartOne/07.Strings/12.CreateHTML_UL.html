@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Create HTML UL</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div data-type="template" id="list-item">
+        <strong>-{name}-</strong> <span>-{age}-</span>
+    </div>
+
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var people = [
+            { name: "Peter", age: 14 },
+            { name: "Ivan", age: 15 }
+        ];
+        var template = document.getElementById("list-item").innerHTML;
+        var peopleList = generateList(people,template);
+
+        //jsConsole.writeLine(people);
+        jsConsole.writeLine(peopleList);
+
+        function generateList(people, template) {
+            var list = "&lt;ul><br>";
+            for (var i = 0; i < people.length; i++) {
+                list += "&lt;li>";
+                list += template.replace(new RegExp("-\\{name\\}-", "gi"), people[i].name).replace(new RegExp("-\\{age\\}-", "gi"), people[i].age);
+                list += "&lt;/li><br>";
+            }
+            list += "&lt;/ul>"
+            return list;
+        };
+
+    </script>
+</body>
+</html>

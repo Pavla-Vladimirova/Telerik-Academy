@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Brackets</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var expression = ")(a+b))";
+        jsConsole.writeLine(expression);
+        var ifPutCorrectly = checkBrackets(expression);
+        jsConsole.writeLine("Are the brackets correctly put? - " + ifPutCorrectly);
+
+        function checkBrackets(expr) {
+            var counter = 0;
+            for (var i = 0; i < expr.length; i++) {
+                if (expr[i] === '(') {
+                    counter++;
+                }
+                else if (expr[i]===')') {
+                    counter--;
+                }
+            }
+            if (counter===0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>

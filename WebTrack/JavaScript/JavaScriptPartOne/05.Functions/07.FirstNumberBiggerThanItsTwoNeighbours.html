@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>First Number is bigger than its two neighbours</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var array=[1,2,3,4,10,6,2,34,5,1,3];
+        jsConsole.writeLine(array.join(","));
+
+        function CheckNumber() {
+            if (array.length===1)
+            {
+                return -1;
+            }
+            for (var i = 0; i < array.length-1; i++) {
+                 if ((array[i]>array[i-1])&&(array[i]>array[i+1]))
+                 {
+                     return i;
+                 }
+            };
+            return -1;
+        }
+        jsConsole.writeLine("The first number bigger than its two neighbours is at index: " + CheckNumber());
+
+    </script>
+</body>
+</html>

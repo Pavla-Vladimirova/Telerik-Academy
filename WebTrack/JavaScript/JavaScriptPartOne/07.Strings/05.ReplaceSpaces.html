@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Replace Spaces with &nbsp; </title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+     <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var text = "We are living in an yellow submarine. We don't have anything else.";
+        jsConsole.writeLine(text);
+        text = changeSpaces(text);
+        jsConsole.writeLine(text);
+
+        function changeSpaces(text) {
+            var space = " ";
+            var startIndex = text.indexOf(space, 0);
+            while (startIndex >= 0) {
+                text = text.replace(" ", "&amp;nbsp;");
+                startIndex = text.indexOf(space, startIndex + 1);
+            }
+            return text;
+        }
+    </script>
+</body>
+</html>

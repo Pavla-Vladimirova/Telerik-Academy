@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Extract text from html document</title>
+     <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+     <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var html = "<html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>";
+        jsConsole.writeLine("&lt;html>&lt;head>&lt;title>Sample site&lt;/title>&lt;/head>&lt;body>&lt;div>text&lt;div>more text&lt;/div>and more...&lt;/div>in body&lt;/body>&lt;/html>");
+        var extracted = extract(html);
+        jsConsole.writeLine(extracted);
+
+        function extract(html) {
+            var endTagIndex = html.indexOf(">",0);
+            var startTagIndex = html.indexOf("<",endTagIndex);
+            var replaced="";
+            while (startTagIndex >= 0){
+                if (endTagIndex + 1 != startTagIndex) {          //not to go throug empty tags ></ 
+                    for (var i = endTagIndex + 1; i < startTagIndex; i++)
+                    {
+                        replaced += html[i];
+                    }
+                }
+                endTagIndex = html.indexOf(">",endTagIndex+1);
+                startTagIndex = html.indexOf("<", endTagIndex);
+            }
+            return replaced;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check prperty</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+           var person1=buildPerson("Ivan","Ivanov",40);
+           var person2=buildPerson("Georgi","Georgiev",20);
+           var person3=buildPerson("Martin","Martinov",34);
+           var persons=[person1,person2,person3];
+           jsConsole.writeLine("Persons: " + persons.join('; '));
+           var youngestPerson=findYoungest(persons);
+           jsConsole.writeLine("The youngest person of all is: " + youngestPerson);
+            function buildPerson(firstName, lastName, age) {
+                return {
+                    FirstName: firstName,
+                    LastName: lastName,
+                    Age:age,
+                    toString: function getFullName() {
+                        return this.FirstName + " " + this.LastName + "," + this.Age;
+                    }
+                };
+            }
+
+            function findYoungest (array) {
+                var minAge=150;
+                var youngest={};
+                for (var i = 0; i < array.length; i++) {
+                    if (array[i].Age<minAge) {
+                        minAge=array[i].Age;
+                        youngest=array[i];
+                    };
+                };
+                return youngest;
+            }
+    </script>
+
+</body>
+</html>

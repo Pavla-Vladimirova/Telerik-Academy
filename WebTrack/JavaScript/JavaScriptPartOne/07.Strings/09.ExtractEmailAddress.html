@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Extract email address</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var text = 'Please contact us by phone (+359 222 222 222) or by email at example@abv.bg or at baj.ivan@yahoo.co.uk. This is not email: test@test. This also: @telerik.com. Neither this: a@a.b.';
+        jsConsole.writeLine(text);
+        jsConsole.writeLine('EXTRACTED EMAILS:');
+        var emails = findEmailAddresses(text);
+        for (var i = 0; i < emails.length; i++) {
+            jsConsole.writeLine(emails[i]);
+        }
+
+        function findEmailAddresses(text) {
+            var emailsArray = text.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/gi);
+            return emailsArray;
+        }
+    </script>
+</body>
+</html>

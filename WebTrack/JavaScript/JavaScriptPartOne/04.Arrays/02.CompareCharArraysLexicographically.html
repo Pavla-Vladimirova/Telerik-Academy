@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Compare Char Arrays</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="#" onclick="onCompareButtonClick()">Compare Arrays</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var i;
+        var identical=true;
+        var firstChars = ["a", "d", "e", "d"];
+        var secondChars = ["a", "b", "c", "d"];
+		jsConsole.writeLine(firstChars.join(","));
+		jsConsole.writeLine(secondChars.join(","));
+        var minLength = firstChars.length;
+        if (secondChars.length < minLength) {
+            minLength = secondChars.length;
+        }
+        
+        function onCompareButtonClick() {
+            for (i = 0; i < minLength; i++) {
+                if (firstChars[i]!=secondChars[i]) {
+                    identical = false;
+                    if (firstChars[i]<secondChars[i]) {
+                        jsConsole.writeLine("The first array is earlier");
+                        break;
+                    }
+                    else {
+                        jsConsole.writeLine("The second array is earlier");
+                        break;
+                    }
+                }
+            }
+            if (identical === true) {
+                if (firstChars.length < secondChars.length) {
+                    jsConsole.writeLine("The first array is earlier");
+                }
+                else if (secondChars.length < firstChars.length) {
+                    jsConsole.writeLine("The second array is earlier");
+                }
+                else {
+                    jsConsole.writeLine("The arrays are identical");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

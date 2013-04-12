@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Most Frequent Number</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+     <a href="#" onclick="onFindMostFrequentButtonClick()">Find most frequent number</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var i;
+        var j;
+        var counter;
+        var maxCounter = 0;
+        var repeating;
+        var maxRepeating;
+        var numbers = [4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 5];
+        jsConsole.writeLine(numbers.join(", "));
+
+        function onFindMostFrequentButtonClick() {
+            for (i = 0; i < numbers.length; i++) {
+                repeating = numbers[i];
+                counter = 0;
+                for ( j = i; j <numbers.length; j++) {
+                    if (repeating==numbers[j]) {
+                        counter++;
+                        repeating = numbers[j];
+                    }
+                }
+                if (counter > maxCounter) {
+                    maxCounter = counter;
+                    maxRepeating = repeating;
+                }
+            }
+            jsConsole.writeLine("The most frequent number is : " + maxRepeating);
+            jsConsole.writeLine("It repeats " + maxCounter + " times");
+        }
+    </script>
+</body>
+</html>

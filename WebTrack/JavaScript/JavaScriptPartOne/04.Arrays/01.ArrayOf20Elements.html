@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Array of 20 elements</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="#" onclick="onInitializeButtonClick()">Initialize array</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var numbers = new Array(20);
+
+        function onInitializeButtonClick() {
+            for (i = 0; i < numbers.length; i++) {
+                numbers[i] = i * 5;
+            }
+            jsConsole.writeLine(numbers.join(", "));
+        }
+    </script>
+</body>
+</html>

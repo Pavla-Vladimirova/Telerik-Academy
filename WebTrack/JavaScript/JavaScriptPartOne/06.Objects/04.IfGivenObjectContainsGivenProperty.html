@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check prperty</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function hasProperty (obj,propertyName) {
+            if (obj.hasOwnProperty(propertyName)) {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        var obj=document;
+        var ckeck=false;
+        var property="xmlVersion";
+        check=hasProperty(obj,property);
+        jsConsole.writeLine("Does object "+obj +" has property=["+property+"]? - " + check);
+    </script>
+
+</body>
+</html>

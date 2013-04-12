@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Planar  coordinate system</title>
+     <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        function buildPoint(x, y) {
+            return{
+                X: x,
+                Y: y
+            }
+        }
+
+        function buildLine(firstPoint, secondPoint) {
+            return{
+                FirstPoint: firstPoint,
+                SecondPoint: secondPoint
+            }
+        }
+
+        function calculateDistanceBetweenTwoPoints(firstPoint, secondPoint) {
+            return Math.sqrt(Math.pow((firstPoint.X - secondPoint.X), 2) + Math.pow((firstPoint.Y - secondPoint.Y), 2));
+        }
+
+        function checkIfLinesCanFormTriangle(firstLine, secondLine, thirdLine) {
+            var a = calculateDistanceBetweenTwoPoints(firstLine.FirstPoint, firstLine.SecondPoint);
+            jsConsole.writeLine("side 'a': " + a);
+            var b = calculateDistanceBetweenTwoPoints(secondLine.FirstPoint, secondLine.SecondPoint);
+             jsConsole.writeLine("side 'b': " + b);
+            var c = calculateDistanceBetweenTwoPoints(thirdLine.FirstPoint, thirdLine.SecondPoint);
+             jsConsole.writeLine("side 'c': " + c);
+            if ((a < b + c)&&(b < a + c)&&(c < a + b)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        var firstPoint = buildPoint(3, 8);
+        var secondPoint = buildPoint(10, 12);
+        var thirdPoint = buildPoint(2, 6);
+
+        var firstLine = buildLine(firstPoint, secondPoint);
+        var secondLine = buildLine(secondPoint, thirdPoint);
+        var thirdLine = buildLine(firstPoint, thirdPoint);
+
+        jsConsole.writeLine("Can transform triangle: " + checkIfLinesCanFormTriangle(firstLine,secondLine,thirdLine));
+       
+    </script>
+</body>
+</html>

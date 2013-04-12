@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Get occurrences of a word in text</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+      <label for="tb-word">Word: </label>
+	<input type="text" id="tb-word"/>
+	<br />
+	<a href="#" onclick="onFindOccurrencesClick()">Get Occurrences</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var text="We are living in an yellow submarine. We don't have anything else. In the submarine is very tight.So we are drinking all the day.We will move out of it in 5 days.";
+	    jsConsole.writeLine(text);
+	    function onFindOccurrencesClick() {
+	        var word = jsConsole.read("#tb-word");
+	        jsConsole.writeLine("Case InSensitive: " + GetOccurrences(word, text, false));
+	        jsConsole.writeLine("Case Sensitive: " + GetOccurrences(word, text,true));
+	    }
+
+	    function GetOccurrences(word,text) {
+	        if (arguments[2]===false) {
+	           text = text.toLowerCase();
+	           var counter = 0;
+	           var array=text.split(" ");
+	           for (var i = 0; i < array.length; i++) {
+	           		if (word==array[i]) {
+	           			counter++;
+	           		};
+	           
+	           };
+	            return counter;
+	        }
+	        else {
+	           var counter = 0;
+	           var array=text.split(" ");
+	           for (var i = 0; i < array.length; i++) {
+	           		if (word==array[i]) {
+	           			counter++;
+	           		};
+	           
+	           };
+	            return counter;
+	        }
+	    }
+
+	</script>
+</body>
+</html>

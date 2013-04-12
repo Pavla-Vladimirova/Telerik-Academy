@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>If Number is bigger than its two neighbours</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+     <label for="tb-index">Index of the number: </label>
+    <input type="text" id="tb-index"/>
+    <br />
+    <a href="#" onclick="onCheckNumberClick()">Check Number</a>
+    <div id="console">
+    </div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        function onCheckNumberClick(){
+            var index=jsConsole.readInteger("#tb-index");
+            CheckNumber(index);
+        }
+
+        var array=[1,2,3,4,10,6,2,34,5,1,3];
+        jsConsole.writeLine(array.join(","));
+
+        function CheckNumber(index) {
+            if (array.length===1)
+            {
+                jsConsole.writeLine("This is the only element");
+                return;
+            }
+            if (index===0)
+            {
+                if (array[index]>array[1])
+                {
+                     jsConsole.writeLine("The element is first and it's bigger than the second element");
+                }
+                else
+                {
+                     jsConsole.writeLine("The element is first but it's not bigger than the second element");
+                }
+            }
+            else if (index===array.length-1)
+            {
+                if (array[index]>array[array.length-2])
+                {
+                     jsConsole.writeLine("The element is last and it's bigger than the previous element");
+                }
+                else
+                {
+                     jsConsole.writeLine("The element is last but it's not bigger than the previous element");
+                }
+            }
+            else 
+            {
+                if ((array[index]>array[index-1])&&(array[index]>array[index+1]))
+                {
+                     jsConsole.writeLine("The element is bigger than its two neighbours");
+                }
+                else
+                {
+                     jsConsole.writeLine("The element it's not bigger than its neighbours");
+                }
+            }
+            return;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Binary Search</title>
+     <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label  for="tb-first">Number to search: </label>
+    <input type="text" id="tb-first" />
+    <br />
+    <a href="#" onclick="onBinarySearchButtonClick()">Binary Search</a>
+	<div id="console">
+	</div>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var i;
+        var numbers = [3, 2, 0, 4, 8, 12, 2, 6, 1, 23, 7];
+        var minimum = numbers[0];
+        var minIndex = 0;
+        var change;
+        jsConsole.writeLine(numbers.join(", "));
+        //Sort the array
+        for (i = 0; i < numbers.length; i++) {
+            minimum = Number.MAX_VALUE;
+            for (j = i; j < numbers.length; j++) {
+                if (numbers[j] < minimum) {
+                    minimum = numbers[j];
+                    minIndex = j;
+                }
+            }
+            change = numbers[minIndex];
+            numbers[minIndex] = numbers[i];
+            numbers[i] = change;
+        }
+        jsConsole.writeLine("The sorted array:");
+        jsConsole.writeLine(numbers.join(", "));
+
+        function onBinarySearchButtonClick() {
+           var number = jsConsole.readInteger("#tb-first");
+           jsConsole.writeLine(number);
+           var found = false;
+           var middleIndex;
+           var startIndex = 0;
+           var lastIndex = numbers.length - 1;
+           while (startIndex <= lastIndex) {
+               middleIndex = Math.floor((startIndex + lastIndex) / 2);
+               if (number==numbers[middleIndex]) {
+                   jsConsole.writeLine("The searched Number " + numbers[middleIndex] + " is at position [" + middleIndex + "] ");
+                   found = true;
+                   break;
+               }
+               else if (number<numbers[middleIndex]) {
+                   lastIndex = middleIndex - 1;
+               }
+               else {
+                   startIndex = middleIndex + 1;
+               }
+           }
+           if (found===false) {
+               jsConsole.writeLine("There is no such number in this array");
+           }
+        }
+    </script>
+</body>
+</html>
