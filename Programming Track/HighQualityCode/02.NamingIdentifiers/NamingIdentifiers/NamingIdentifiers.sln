@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ConverterExample", "01.ConverterExample\01.ConverterExample.csproj", "{64A6C0E1-8D14-4E3F-8C5E-EEB05F0C62A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.HumanBeing", "02.HumanBeing\02.HumanBeing.csproj", "{2F6F2EAD-8F42-4CD8-B155-0637FE713272}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.JavScriptFiles", "03.JavScriptFiles", "{C62D256A-F3BC-449D-8CBE-0F072B709319}"
+	ProjectSection(SolutionItems) = preProject
+		03.JavaScriptExample.js = 03.JavaScriptExample.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64A6C0E1-8D14-4E3F-8C5E-EEB05F0C62A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64A6C0E1-8D14-4E3F-8C5E-EEB05F0C62A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64A6C0E1-8D14-4E3F-8C5E-EEB05F0C62A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64A6C0E1-8D14-4E3F-8C5E-EEB05F0C62A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F6F2EAD-8F42-4CD8-B155-0637FE713272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F6F2EAD-8F42-4CD8-B155-0637FE713272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F6F2EAD-8F42-4CD8-B155-0637FE713272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F6F2EAD-8F42-4CD8-B155-0637FE713272}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
